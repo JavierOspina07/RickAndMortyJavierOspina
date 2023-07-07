@@ -20,22 +20,14 @@ function App() {
 
   return (
     <div>
-      <h1>Rick and Morty</h1>
+      <h1>Rick and Morty App</h1>
       <LocationInfo location={location} />
-      <div>
-        {
-          location?.residents.map(url =>(
-            <ResidentCard
-              key={url}
-              url={url}
-            />
-          ))
-        }
+      <div className="resident-container">
+        {location?.residents.map((url) => (
+          <ResidentCard key={url} url={url} />
+        ))}
       </div>
     </div>
-
-
-    
   );
 }
 

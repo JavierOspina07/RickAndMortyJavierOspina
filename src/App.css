@@ -1,0 +1,7 @@
+.resident-container{
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+

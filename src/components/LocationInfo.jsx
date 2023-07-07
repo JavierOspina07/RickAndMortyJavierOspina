@@ -1,4 +1,5 @@
 const LocationInfo = ({ location }) => {
+
   return (
     <article>
       <h2>{location?.name}</h2>
