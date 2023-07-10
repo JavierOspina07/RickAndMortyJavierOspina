@@ -57,13 +57,24 @@
 
 /* ==== header ==== */
 
-.header{
+.header {
   background-image: url(../public/hederrickandmorty.jpg);
   height: 270px;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   margin-bottom: 1em;
 }
+
+@media (max-width: 768px) {
+  .header {
+    background-image: url(../public/hederrickandmorty.jpg); /* Ruta de la imagen de fondo para dispositivos móviles */
+    height: 100px; /* Altura reducida para dispositivos móviles */
+    background-size: cover;
+  }
+}
+
 
 
 /* Barras de desplazamiento en Chrome y Safari */
