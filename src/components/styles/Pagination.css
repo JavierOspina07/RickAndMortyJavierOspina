@@ -38,3 +38,11 @@
   .pagination__Next{
     border-radius: 0 10px 10px 0;
   }
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .pagination button {
+    padding: 6px 12px; /* Ajustar el tamaño de los botones para dispositivos móviles */
+    font-size: 14px; /* Ajustar el tamaño de la fuente para dispositivos móviles */
+  }
+}
