@@ -33,12 +33,12 @@ function App() {
 
   return (
     <div>
-      <h1>Rick and Morty App</h1>
+      <div className="header"></div>
       <FormLocation setIdLocation={setIdLocation} />
 
       {isloading ? (
         <div className="Loader">
-          <div className="loader">
+          <div className="Loader__Countainer">
             <div className="circle circle-1"></div>
             <div className="circle circle-2"></div>
             <div className="circle circle-3"></div>
@@ -46,7 +46,9 @@ function App() {
           </div>
         </div>
       ) : hasError ? (
-        <h1>❌Hey! you mus provide an id from 1 to 126 🥹</h1>
+        <h1 className="error-message">
+          <i className="bx bx-error-circle"></i>Hey! you mus provide an id from 1 to 126 🥹
+        </h1>
       ) : (
         <>
           <LocationInfo location={location} />

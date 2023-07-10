@@ -3,8 +3,15 @@
 /* --- Reset --- */
 
 :root {
-  --bg-card: #1a262c;
-  --color-name: white;
+  /* Header height  */
+  --header-height: 56px;
+  /* Colors  */
+  --text-color: white;
+  --dimension-name: #6DA826;
+  --bg-card: #072226;
+  --background-primary: #05292E;
+  --color-dead: #B94343;
+  --color-alive: #4AB648
 }
 
 * {
@@ -13,10 +20,14 @@
 
 html {
   font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  background-color: var(--background-primary);
 }
 
 h1,
@@ -47,6 +58,8 @@ button {
   cursor: pointer;
 }
 
+/* ===== Loader ===== */
+
 .loader {
   position: relative;
   width: 600px;
@@ -67,21 +80,33 @@ button {
 .circle-1 {
   width: 300px;
   height: 300px;
-  background: linear-gradient(109.8deg, rgba(52, 248, 35, 0.1855) 0%, rgba(68, 253, 38, 0.196) 100%);
+  background: linear-gradient(
+    109.8deg,
+    rgba(52, 248, 35, 0.1855) 0%,
+    rgba(68, 253, 38, 0.196) 100%
+  );
   animation-name: circle-1-animation;
 }
 
 .circle-3 {
   width: 200px;
   height: 200px;
-  background: linear-gradient(109.8deg, rgba(52, 248, 35, 0.265) 0%, rgba(68, 253, 38, 0.28) 100%);
+  background: linear-gradient(
+    109.8deg,
+    rgba(52, 248, 35, 0.265) 0%,
+    rgba(68, 253, 38, 0.28) 100%
+  );
   animation-name: circle-3-animation;
 }
 
 .circle-4 {
   width: 100px;
   height: 100px;
-  background: linear-gradient(109.8deg, rgba(52, 248, 35, 0.265) 0%, rgba(68, 253, 38, 0.28) 100%);
+  background: linear-gradient(
+    109.8deg,
+    rgba(52, 248, 35, 0.265) 0%,
+    rgba(68, 253, 38, 0.28) 100%
+  );
   animation-name: circle-4-animation;
 }
 
@@ -139,28 +164,4 @@ button {
   100% {
     transform: scale(1);
   }
-}
-/*==== estilos para loader ====*/
-.loader { /* nombrel contenerdor */
-  width: 250px;
-  height: 250px;
-  margin: 100px auto;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.Loader { /* div para poner fondo aplicado a fullscreen */
-  background: #1A262C;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

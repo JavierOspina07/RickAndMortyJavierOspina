@@ -1,14 +1,15 @@
 .resident {
   background-color: var(--bg-card);
-  color: white;
+  color: var(--text-color);
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   border-radius: 0.8em;
   overflow: hidden; /* borra todo lo que sobre salga de la card */
   transition: transform 200ms ease;
+  margin-bottom: 3em;
 }
 
-.resident:hover{
+.resident:hover {
   transform: scale(1.05);
 }
 
@@ -42,14 +43,13 @@
   border-radius: 50%;
 }
 
-.Alive{
-    background-color: #77C332;
+.Alive {
+  background-color: var(--color-alive);
 }
 
-.Dead{
-    background-color: red;
+.Dead {
+  background-color: var(--color-dead);
 }
- 
 
 .resident__body {
   padding: 1em 0.8em 2em;
@@ -61,29 +61,27 @@
 }
 
 .resident__line {
-  margin-top: 0.5em;
+  margin-top: 0.6em;
   margin-bottom: 1em;
-  border-color: #aaa3 ;
+  border-color: #aaa3;
 }
 
-.resident__list{
-    display: grid;
-    gap: 0.8em;
+.resident__list {
+  display: grid;
+  gap: 0.8em;
 }
 
-.resident__item{
-    display: flex;
-    flex-direction: column;
-    gap: 0.2em;
+.resident__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
 }
 
-.resident__label{
-    color: #aaa;
-    font-weight: 300;
+.resident__label {
+  color: #aaa;
+  font-weight: 300;
 }
 
-.resident__item-value{
-    padding-left: 1em;
+.resident__item-value {
+  padding-left: 1em;
 }
-
-
