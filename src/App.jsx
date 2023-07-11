@@ -6,32 +6,20 @@ import LocationInfo from "./components/LocationInfo";
 import ResidentCard from "./components/ResidentCard";
 import FormLocation from "./components/FormLocation";
 import Pagination from "./components/Pagination";
+import useFetch from "./hooks/useFetch";
 
 function App() {
-  const [location, setLocation] = useState();
+
+
   const [idLocation, setIdLocation] = useState(getRandomNumber(126));
-  const [hasError, setHasError] = useState(false);
-  const [isloading, setisloading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [residentsPerPage] = useState(8);
 
-  useEffect(() => {
-    const url = `https://rickandmortyapi.com/api/location/${idLocation}`;
-    setisloading(true);
-    axios
-      .get(url)
-      .then((res) => {
-        setLocation(res.data);
-        setHasError(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setHasError(true);
-      })
+  const url = `https://rickandmortyapi.com/api/location/${idLocation}`;
+  const [location, getSingLocation, hasError, isloading]= useFetch(url)
 
-      .finally(() => {
-        setisloading(false);
-      });
+  useEffect(() => {
+    getSingLocation()
   }, [idLocation]);
 
   const handlePageChange = (pageNumber) => {
