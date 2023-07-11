@@ -1,6 +1,6 @@
 import './styles/Pagination.css'
 
-function Pagination({ currentPage, totalPages, onPageChange }) {
+const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = (page) => {
     onPageChange(page);
   };

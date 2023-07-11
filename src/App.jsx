@@ -12,7 +12,7 @@ function App() {
   const [idLocation, setIdLocation] = useState(getRandomNumber(126));
   const [hasError, setHasError] = useState(false);
   const [isloading, setisloading] = useState(true);
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [residentsPerPage] = useState(8);
 
   useEffect(() => {

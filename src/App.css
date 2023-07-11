@@ -19,15 +19,15 @@
 }
 
 @keyframes expand-out {
-    0% {
-      transform: translate(0%, 0%) scale(0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0%, 0%) scale(1);
-      opacity: 1;
-    }
+  0% {
+    transform: translate(0%, 0%) scale(0);
+    opacity: 0;
   }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 1;
+  }
+}
 
 /*==== estilos para loader ====*/
 .Loader__Countainer {
@@ -75,32 +75,29 @@
   }
 }
 
-
-
 /* Barras de desplazamiento en Chrome y Safari */
 /* Barra vertical */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: var(--background-primary);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--dimension-name);
-  }
-  
-  /* Barra horizontal */
-  ::-webkit-scrollbar-horizontal {
-    height: 10px;
-  }
-  
-  ::-webkit-scrollbar-track-horizontal {
-    background-color: var(--background-primary);
-  }
-  
-  ::-webkit-scrollbar-thumb-horizontal {
-    background-color: var(--dimension-name);
-  }
-  
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dimension-name);
+}
+
+/* Barra horizontal */
+::-webkit-scrollbar-horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-track-horizontal {
+  background-color: var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+  background-color: var(--dimension-name);
+}
