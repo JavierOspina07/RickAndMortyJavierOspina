@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-const useFetch = () => {
+const useFetch = (url) => {
 
     const [infoApi, setInfoApi] = useState()
     const [hasError, setHasError] = useState(false)

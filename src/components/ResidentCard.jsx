@@ -1,16 +1,13 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./styles/ResidentCard.css";
+import useFetch from "../hooks/useFetch";
 
 const ResidentCard = ({ url }) => {
-  const [character, setCharacter] = useState();
+  const [character, getSingleCharacter] = useFetch(url);
 
   useEffect(() => {
-    axios
-      .get(url)
-      .then((res) => setCharacter(res.data))
-      .catch((err) => console.error(err));
-  }, );
+    getSingleCharacter();
+  });
 
   return (
     <article className="resident">
@@ -19,7 +16,7 @@ const ResidentCard = ({ url }) => {
         <div className="resident__status">
           <div className={`resident__status-circle ${character?.status}`}></div>
           <span className="resident__status-value">{character?.status}</span>
-        </div> 
+        </div>
       </header>
       <section className="resident__body">
         <h3 className="resident__name">{character?.name}</h3>
