@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import getRandomNumber from "./utils/getRandomNumber";
 import LocationInfo from "./components/LocationInfo";
 import ResidentCard from "./components/ResidentCard";

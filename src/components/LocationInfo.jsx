@@ -15,7 +15,9 @@ const LocationInfo = ({ location }) => {
         </li>
         <li className="location__detail">
           <span className="location__detail-label">Population: </span>
-          <span className="location__detail-value">{location?.residents.length}</span>
+          <span className="location__detail-value">
+            {location?.residents.length}
+          </span>
         </li>
       </ul>
     </article>
