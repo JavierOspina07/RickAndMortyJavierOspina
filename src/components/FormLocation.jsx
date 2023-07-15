@@ -18,7 +18,6 @@ const FormLocation = ({ setIdLocation }) => {
       <input
         className="form-location__input"
         id="inputId"
-        style={{ boxShadow: "1px 1px 10px" }}
         type="text"
         placeholder="values (1 - 126)"
       />
