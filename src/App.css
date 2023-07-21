@@ -30,7 +30,7 @@
 }
 
 /*==== estilos para loader ====*/
-.Loader__Countainer {
+.loader {
   /* nombrel contenerdor */
   width: 250px;
   height: 250px;
@@ -41,7 +41,7 @@
   justify-content: center;
 }
 
-.Loader {
+.loader__countainer {
   /* div para poner fondo aplicado a fullscreen */
   background: var(--background-primary);
   position: fixed;

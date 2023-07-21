@@ -31,8 +31,8 @@ function App() {
       <FormLocation setIdLocation={setIdLocation} />
 
       {isloading ? (
-        <div className="Loader">
-          <div className="Loader__Countainer">
+        <div className="loader__countainer">
+          <div className="loader">
             <div className="circle circle-1"></div>
             <div className="circle circle-2"></div>
             <div className="circle circle-3"></div>
