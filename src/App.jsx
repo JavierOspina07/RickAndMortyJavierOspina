@@ -1,43 +1,38 @@
-import "./App.css";
-import { useState, useEffect } from "react";
-import getRandomNumber from "./utils/getRandomNumber";
-import LocationInfo from "./components/LocationInfo";
-import ResidentCard from "./components/ResidentCard";
-import FormLocation from "./components/FormLocation";
-import Pagination from "./components/Pagination";
-import useFetch from "./hooks/useFetch";
-import Loader from "./components/Loader";
+import "./App.css"
+import { useState, useEffect } from "react"
+import getRandomNumber from "./utils/getRandomNumber"
+import LocationInfo from "./components/LocationInfo"
+import ResidentCard from "./components/ResidentCard"
+import FormLocation from "./components/FormLocation"
+import Pagination from "./components/Pagination"
+import useFetch from "./hooks/useFetch"
+import Loader from "./components/Loader"
+import Error from "./components/Error"
 
 function App() {
+  const [idLocation, setIdLocation] = useState(getRandomNumber(126))
+  const [currentPage, setCurrentPage] = useState(1)
+  const [residentsPerPage] = useState(8)
 
-
-  const [idLocation, setIdLocation] = useState(getRandomNumber(126));
-  const [currentPage, setCurrentPage] = useState(1);
-  const [residentsPerPage] = useState(8);
-
-  const url = `https://rickandmortyapi.com/api/location/${idLocation}`;
-  const [location, getSingLocation, hasError, isloading]= useFetch(url)
+  const url = `https://rickandmortyapi.com/api/location/${idLocation}`
+  const [location, getSingLocation, hasError, isloading] = useFetch(url)
 
   useEffect(() => {
     getSingLocation()
-  }, [idLocation]);
+  }, [idLocation])
 
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  const handlePageChange = pageNumber => {
+    setCurrentPage(pageNumber)
+  }
 
   return (
     <div>
       <div className="header"></div>
       <FormLocation setIdLocation={setIdLocation} />
-
       {isloading ? (
-        <Loader/>
+        <Loader />
       ) : hasError ? (
-        <h1 className="error-message">
-          <i className="bx bx-error-circle"></i>Hey! you mus provide an id from
-          1 to 126 🥹
-        </h1>
+        <Error />
       ) : (
         <>
           <LocationInfo location={location} />
@@ -47,7 +42,7 @@ function App() {
                 (currentPage - 1) * residentsPerPage,
                 currentPage * residentsPerPage
               )
-              .map((url) => (
+              .map(url => (
                 <ResidentCard key={url} url={url} />
               ))}
           </div>
@@ -61,7 +56,7 @@ function App() {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
