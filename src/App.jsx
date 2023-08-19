@@ -6,6 +6,7 @@ import ResidentCard from "./components/ResidentCard";
 import FormLocation from "./components/FormLocation";
 import Pagination from "./components/Pagination";
 import useFetch from "./hooks/useFetch";
+import Loader from "./components/Loader";
 
 function App() {
 
@@ -31,14 +32,7 @@ function App() {
       <FormLocation setIdLocation={setIdLocation} />
 
       {isloading ? (
-        <div className="loader__countainer">
-          <div className="loader">
-            <div className="circle circle-1"></div>
-            <div className="circle circle-2"></div>
-            <div className="circle circle-3"></div>
-            <div className="circle circle-4"></div>
-          </div>
-        </div>
+        <Loader/>
       ) : hasError ? (
         <h1 className="error-message">
           <i className="bx bx-error-circle"></i>Hey! you mus provide an id from
